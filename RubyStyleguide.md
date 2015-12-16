@@ -4,13 +4,13 @@
 
 * Use soft-tabs with a two space indent.
 
-* Keep lines fewer than 80 characters.
+* Keep lidones fewer than 120 characters.
 
 * Never leave trailing whitespace.
 
 * End each file with a blank newline.
 
-* Use spaces around operators, after commas, colons and semicolons, around { and before }.
+* Use spaces around operators, after commas, colons and semicolons, around `{` and before `}`.
 
 ```rb
 sum = 1 + 2
@@ -19,14 +19,14 @@ a, b = 1, 2
 [1, 2, 3].each { |e| puts e }
 ```
 
-* No spaces after (, [ or before ], ).
+* No spaces after `(`, `[` or before `]`, `)`.
 
 ```rb
 some(arg).other
 [1, 2, 3].length
 ```
 
-* No spaces after !.
+* No spaces after `!`.
 
 ```rb
 !array.include?(element)
@@ -72,41 +72,6 @@ def some_method
 end
 ```
 
-## Documentation
-
-* Use TomDoc to the best of your ability. It's pretty sweet:
-
-```rb
-# Public: Duplicate some text an arbitrary number of times.
-#
-# text  - The String to be duplicated.
-# count - The Integer number of times to duplicate the text.
-#
-# Examples
-#
-#   multiplex("Tom", 4)
-#   # => "TomTomTomTom"
-#
-# Returns the duplicated String.
-def multiplex(text, count)
-  text * count
-end
-```
-
-## Requires
-
-* Always require dependencies used directly in a script at the start of the same file. Resources that will get autoloaded on first use—such as Rails models, controllers, or helpers—don't need to be required.
-
-```rb
-require "set"
-require "time"
-
-%w(foo bar).to_set
-Time.parse("2015-10-21")
-```
-
-This not only loads the necessary dependencies if they haven't already, but acts as documentation about the libraries that the current file uses.
-
 ## Syntax
 
 * Use def with parentheses when there are arguments. Omit the parentheses when the method doesn't accept any arguments.
@@ -121,7 +86,7 @@ def some_method_with_arguments(arg1, arg2)
 end
 ```
 
-* Never use `for`, unless you know exactly why. Most of the time iterators should be used instead. for is implemented in terms of each (so you're adding a level of indirection), but with a twist - for doesn't introduce a new scope (unlike each) and variables defined in its block will be visible outside it.
+* Never use `for`, unless you know exactly why. Most of the time iterators should be used instead. `for` is implemented in terms of `each` (so you're adding a level of indirection), but with a twist - `for` doesn't introduce a new scope (unlike `each`) and variables defined in its block will be visible outside it.
 
 ```rb
 arr = [1, 2, 3]
@@ -135,7 +100,7 @@ end
 arr.each { |elem| puts elem }
 ```
 
-* Never use then for multi-line if/unless.
+* Never use `then` for multi-line `if/unless`.
 
 ```rb
 # bad
@@ -273,8 +238,6 @@ def some_method(arg1 = :default, arg2 = nil, arg3 = [])
 end
 ```
 
-* While several Ruby books suggest the first style, the second is much more prominent in practice (and arguably a bit more readable).
-
 * Using the return value of `=` (an assignment) is ok.
 
 ```rb
@@ -287,8 +250,9 @@ if v = array.grep(/foo/) ...
 # also good - has correct precedence.
 if (v = next_value) == "hello" ...
 
-Use ||= freely to initialize variables.
+* Use `||=` freely to initialize variables.
 
+``rb
 # set name to Bozhidar, only if it's nil or false
 name ||= "Bozhidar"
 ```
@@ -303,7 +267,7 @@ enabled ||= true
 enabled = true if enabled.nil?
 ```
 
-* Avoid using Perl-style special variables (like $0-9, $, etc. ). They are quite cryptic and their use in anything but one-liner scripts is discouraged. Prefer long form versions such as $PROGRAM_NAME.
+* Avoid using Perl-style special variables (like `$0-9`, `$`, etc. ). They are quite cryptic and their use in anything but one-liner scripts is discouraged. Prefer long form versions such as `$PROGRAM_NAME`.
 
 * Never put a space between a method name and the opening parenthesis.
 
@@ -315,7 +279,7 @@ f (3 + 2) + 1
 f(3 + 2) + 1
 ```
 
-* If the first argument to a method begins with an open parenthesis, always use parentheses in the method invocation. For example, write f((3 + 2) + 1).
+* If the first argument to a method begins with an open parenthesis, always use parentheses in the method invocation. For example, write `f((3 + 2) + 1)`.
 
 * Use `_` for unused block parameters.
 
@@ -329,19 +293,21 @@ result = hash.map { |_, v| v + 1 }
 
 * Don't use the `===` (threequals) operator to check types. `===` is mostly an implementation detail to support Ruby features like case, and it's not commutative. For example, `String === "hi"` is true and `"hi" === String` is false. Instead, use `is_a?` or `kind_of?` if you must.
 
-* Refactoring is even better. It's worth looking hard at any code that explicitly checks types.
+Refactoring is even better. It's worth looking hard at any code that explicitly checks types.
 
 ## Naming
 
-* Use snake_case for methods and variables.
+* Use `snake_case` for methods and variables.
 
-* Use CamelCase for classes and modules. (Keep acronyms like HTTP, RFC, XML uppercase.)
+<!--
+* Use `CamelCase` for classes and modules. (Keep acronyms like `HTTP`, `RFC`, `XML` uppercase.)
+-->
 
-* Use SCREAMING_SNAKE_CASE for other constants.
+* Use `SCREAMING_SNAKE_CASE` for other constants.
 
-* The names of predicate methods (methods that return a boolean value) should end in a question mark. (i.e. Array#empty?).
+* The names of predicate methods (methods that return a boolean value) should end in a question mark. (i.e. `Array#empty?`).
 
-* The names of potentially "dangerous" methods (i.e. methods that modify self or the arguments, exit!, etc.) should end with an exclamation mark. Bang methods should only exist if a non-bang method exists. (More on this).
+* The names of potentially "dangerous" methods (i.e. methods that modify `self` or the arguments, `exit!`, modify global state, etc.) should end with an exclamation mark. Bang methods should only exist if a non-bang method exists. (More on this).
 
 ## Classes
 
@@ -365,7 +331,7 @@ Parent.print_class_var # => will print "child"
 
 * As you can see all the classes in a class hierarchy actually share one class variable. Class instance variables should usually be preferred over class variables.
 
-* Use def self.method to define singleton methods. This makes the methods more resistant to refactoring changes.
+* Use `def self.method` to define singleton methods. This makes the methods more resistant to refactoring changes.
 
 ```rb
 class TestClass
@@ -380,7 +346,7 @@ class TestClass
   end
 ```
 
-* Avoid class << self except when necessary, e.g. single accessors and aliased attributes.
+* Avoid `class << self` except when necessary, e.g. single accessors and aliased attributes.
 
 ```rb
 class TestClass
@@ -411,7 +377,7 @@ class TestClass
 end
 ```
 
-* Indent the public, protected, and private methods as much the method definitions they apply to. Leave one blank line above them.
+* Indent the `public`, `protected`, and `private` methods as much the method definitions they apply to. Leave one blank line above and after them.
 
 ```rb
 class SomeClass
@@ -420,13 +386,15 @@ class SomeClass
   end
 
   private
+  
   def private_method
     # ...
   end
 end
 ```
 
-* Avoid explicit use of self as the recipient of internal class or instance messages unless to specify a method shadowed by a variable.
+<!--
+* Avoid explicit use of `self` as the recipient of internal class or instance messages unless to specify a method shadowed by a variable.
 
 ```rb
 class SomeClass
@@ -438,6 +406,7 @@ class SomeClass
   end
 end
 ```
+-->
 
 ## Exceptions
 
@@ -459,7 +428,7 @@ else
 end
 ```
 
-* Rescue specific exceptions, not StandardError or its superclasses.
+* Rescue specific exceptions, not `StandardError` or its superclasses.
 
 ```rb
 # bad
@@ -479,7 +448,7 @@ end
 
 ## Collections
 
-Prefer `%w` to the literal array syntax when you need an array of strings.
+Prefer `%w` to the literal array syntax when you need an array of words.
 
 ```rb
 # bad
@@ -489,7 +458,7 @@ STATES = ["draft", "open", "closed"]
 STATES = %w(draft open closed)
 ```
 
-* Use Set instead of Array when dealing with unique elements. Set implements a collection of unordered values with no duplicates. This is a hybrid of Array's intuitive inter-operation facilities and Hash's fast lookup.
+* Use `Set` instead of `Array` when dealing with unique elements. `Set` implements a collection of unordered values with no duplicates. This is a hybrid of `Array`'s intuitive inter-operation facilities and `Hash`'s fast lookup.
 
 * Use symbols instead of strings as hash keys.
 
@@ -513,7 +482,8 @@ email_with_name = user.name + " <" + user.email + ">"
 email_with_name = "#{user.name} <#{user.email}>"
 ```
 
-* Use double-quoted strings. Interpolation and escaped characters will always work without a delimiter change, and ' is a lot more common than " in string literals.
+<!--
+* Use double-quoted strings. Interpolation and escaped characters will always work without a delimiter change, and `'` is a lot more common than `"` in string literals.
 
 ```rb
 # bad
@@ -522,8 +492,9 @@ name = 'Bozhidar'
 # good
 name = "Bozhidar"
 ```
+-->
 
-* Avoid using String#+ when you need to construct large data chunks. Instead, use String#<<. Concatenation mutates the string instance in-place and is always faster than String#+, which creates a bunch of new string objects.
+* Avoid using `String#+` when you need to construct large data chunks. Instead, use `String#<<`. Concatenation mutates the string instance in-place and is always faster than `String#+`, which creates a bunch of new string objects.
 
 ```rb
 # good and also fast
@@ -537,7 +508,7 @@ end
 
 ## Regular Expressions
 
-* Avoid using $1-9 as it can be hard to track what they contain. Named groups can be used instead.
+* Avoid using `$1-9` as it can be hard to track what they contain. Named groups can be used instead.
 
 ```rb
 # bad
@@ -559,57 +530,15 @@ string[/^username$/]   # matches
 string[/\Ausername\z/] # don't match
 ```
 
-* Use x modifier for complex regexps. This makes them more readable and you can add some useful comments. Just be careful as spaces are ignored.
-
-```rb
-regexp = %r{
-  start         # some text
-  \s            # white space char
-  (group)       # first group
-  (?:alt1|alt2) # some alternation
-  end
-}x
-```
-
 ## Percent Literals
 
-* Use `%w` freely.
+* In general you should avoid percent literals (`%w`, `%i`, `%r`, etc.) because they are cryptic. Exceptions might be large arrays of words or symbols where the percent literal syntax makes it much easier to read
 
 ```rb
-STATES = %w(draft open closed)
+STATES = %w(massachusetts maine kentucky vermont florida california texas)
 ```
 
-* Use %() for single-line strings which require both interpolation and embedded double-quotes. For multi-line strings, prefer heredocs.
-
-```rb
-# bad (no interpolation needed)
-%(<div class="text">Some text</div>)
-# should be "<div class=\"text\">Some text</div>"
-
-# bad (no double-quotes)
-%(This is #{quality} style)
-# should be "This is #{quality} style"
-
-# bad (multiple lines)
-%(<div>\n<span class="big">#{exclamation}</span>\n</div>)
-# should be a heredoc.
-
-# good (requires interpolation, has quotes, single line)
-%(<tr><td class="name">#{name}</td>)
-
-Use %r only for regular expressions matching more than one '/' character.
-
-# bad
-%r(\s+)
-
-# still bad
-%r(^/(.*)$)
-# should be /^\/(.*)$/
-
-# good
-%r(^/blog/2011/(.*)$)
-```
-
+<!--
 ## Hashes
 
 * Use hashrocket syntax for Hash literals instead of the JSON style introduced in 1.9.
@@ -635,6 +564,7 @@ user = {
   "followers-count" => 52390235
 }
 ```
+-->
 
 ## Keyword Arguments
 
@@ -662,3 +592,15 @@ end
 remove_member user, skip_membership_check: true
 ```
 
+A few other more expressive suggestions:
+
+```rb
+# Rather than create a hash each time this method is called, why not use something truthy?
+remove_member(user, :skip_membership_check)
+```
+
+Or use a unreferenced local variable which will be removed during optimization by the compiler:
+
+```rb
+remove_member(user, _skip_membership_check = true)
+```
