@@ -9,5 +9,5 @@ these things into your development workflow.
 
 ## Contents
 
-* [Ruby Styleguide](https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md) - write you Ruby for great good
+* [Ruby Styleguide](https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md) - write you a Ruby for great good
 * [Front-End Guides](https://github.com/backupify/backupify_styleguides/blob/master/FrontEndGuides.md) - collection of front-end guides
