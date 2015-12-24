@@ -36,3 +36,22 @@ Style/SpaceAfterSemicolon:
   StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#spaces-around-operators
   Enabled: true
 
+Style/SpaceBeforeBlockBraces:
+  StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#spaces-around-operators
+  Enabled: true
+  EnforcedStyle: space
+
+Style/SpaceInsideBlockBraces:
+  StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#spaces-around-operators
+  Enabled: true
+  EnforcedStyle: space
+  # Valid values are: space, no_space
+  EnforcedStyleForEmptyBraces: no_space
+  # Space between { and |. Overrides EnforcedStyle if there is a conflict.
+  SpaceBeforeBlockParameters: true
+
+Style/SpaceInsideHashLiteralBraces:
+  StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#spaces-around-operators
+  Enabled: true
+  EnforcedStyle: space
+  EnforcedStyleForEmptyBraces: no_space
