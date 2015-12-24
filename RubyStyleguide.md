@@ -4,7 +4,7 @@
 
 * Use soft-tabs with a two space indent.
 
-* Keep lidones fewer than 120 characters.
+* Keep lines fewer than 120 characters.
 
 * Never leave trailing whitespace.
 
