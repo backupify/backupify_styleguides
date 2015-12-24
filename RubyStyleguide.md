@@ -24,7 +24,7 @@ def my_method(name = nil); end
 "this is #{my_string_example}"
 ```
 
-* No spaces after `(`, `[` or before `]`, `)`.
+* No spaces after `(`, `[` or before `]`, `)`. [[link](#no-spaces-around-delimiters)]
 
 ```rb
 some(arg).other
