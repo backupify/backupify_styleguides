@@ -6,7 +6,7 @@
 
 * Keep lines fewer than 120 characters. [[link](#max-line-length)]
 
-* Never leave trailing whitespace.
+* Never leave trailing whitespace. [[link](#no-trailing-whitespace)]
 
 * End each file with a blank newline.
 

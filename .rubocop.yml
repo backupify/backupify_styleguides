@@ -8,3 +8,7 @@ AllCops:
 Metrics/LineLength:
   StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#max-line-length
   Max: 120
+
+Style/TrailingWhitespace:
+  StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#no-trailing-whitespace
+  Enabled: true
