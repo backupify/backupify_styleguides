@@ -79,7 +79,7 @@ end
 
 ## Syntax
 
-* Use def with parentheses when there are arguments. Omit the parentheses when the method doesn't accept any arguments.
+* Use `def` with parentheses when there are arguments. Omit the parentheses when the method doesn't accept any arguments. [[link](#method-parentheses)]
 
 ```rb
 def some_method

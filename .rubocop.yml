@@ -76,3 +76,11 @@ Style/SpaceInsideBrackets:
 Style/SpaceAfterMethodName:
   StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#no-space-after-method-name
   Enabled: true
+
+Style/MethodDefParentheses:
+  StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#method-parentheses
+  Enabled: true
+
+Style/DefWithParentheses:
+  StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#method-parentheses
+  Enabled: true
