@@ -61,7 +61,7 @@ kind = case year
        end
 ```
 
-* Use empty lines between defs and to break up a method into logical paragraphs.
+* Use empty lines between `def`s and to break up a method into logical paragraphs.
 
 ```rb
 def some_method
