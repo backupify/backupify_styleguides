@@ -1,0 +1,10 @@
+AllCops:
+  DisabledByDefault: true
+  Exclude:
+    - db/**/*
+    - script/**/*
+    - config/**/*
+
+Metrics/LineLength:
+  StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#max-line-length
+  Max: 120
