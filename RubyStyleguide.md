@@ -2,7 +2,7 @@
 
 ## Coding Style
 
-* Use soft-tabs with a two space indent.
+* Use soft-tabs with a two space indent. [[link](#tabs)]
 
 * Keep lines fewer than 120 characters. [[link](#max-line-length)]
 

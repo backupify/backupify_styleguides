@@ -84,3 +84,11 @@ Style/MethodDefParentheses:
 Style/DefWithParentheses:
   StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#method-parentheses
   Enabled: true
+
+Style/Tab:
+  StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#tabs
+  Enabled: true
+
+Style/IndentationWidth:
+  StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#tabs
+  Enabled: true
