@@ -12,3 +12,7 @@ Metrics/LineLength:
 Style/TrailingWhitespace:
   StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#no-trailing-whitespace
   Enabled: true
+
+Style/TrailingBlankLines:
+  StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#end-file-newline
+  EnforcedStyle: final_newline

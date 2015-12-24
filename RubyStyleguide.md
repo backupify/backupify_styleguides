@@ -8,7 +8,7 @@
 
 * Never leave trailing whitespace. [[link](#no-trailing-whitespace)]
 
-* End each file with a blank newline.
+* End each file with a newline. [[link](#end-file-newline)]
 
 * Use spaces around operators, after commas, colons and semicolons, around `{` and before `}`.
 
