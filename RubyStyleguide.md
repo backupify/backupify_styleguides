@@ -274,7 +274,7 @@ enabled = true if enabled.nil?
 
 * Avoid using Perl-style special variables (like `$0-9`, `$`, etc. ). They are quite cryptic and their use in anything but one-liner scripts is discouraged. Prefer long form versions such as `$PROGRAM_NAME`.
 
-* Never put a space between a method name and the opening parenthesis.
+* Never put a space between a method name and the opening parenthesis. [[link](#no-space-after-method-name)]
 
 ```rb
 # bad

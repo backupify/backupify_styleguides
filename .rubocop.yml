@@ -72,3 +72,7 @@ Style/SpaceInsideParens:
 Style/SpaceInsideBrackets:
   StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#no-spaces-around-delimiters
   Enabled: true
+
+Style/SpaceAfterMethodName:
+  StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#no-space-after-method-name
+  Enabled: true
