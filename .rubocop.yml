@@ -5,6 +5,16 @@ AllCops:
     - script/**/*
     - config/**/*
 
+## Coding Style
+
+Style/Tab:
+  StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#tabs
+  Enabled: true
+
+Style/IndentationWidth:
+  StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#tabs
+  Enabled: true
+
 Metrics/LineLength:
   StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#max-line-length
   Max: 120
@@ -73,26 +83,6 @@ Style/SpaceInsideBrackets:
   StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#no-spaces-around-delimiters
   Enabled: true
 
-Style/SpaceAfterMethodName:
-  StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#no-space-after-method-name
-  Enabled: true
-
-Style/MethodDefParentheses:
-  StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#method-parentheses
-  Enabled: true
-
-Style/DefWithParentheses:
-  StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#method-parentheses
-  Enabled: true
-
-Style/Tab:
-  StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#tabs
-  Enabled: true
-
-Style/IndentationWidth:
-  StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#tabs
-  Enabled: true
-
 Style/CaseIndentation:
   StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#case-indentation
   Enabled: true
@@ -103,4 +93,18 @@ Style/ElseAlignment:
 
 Style/RescueEnsureAlignment:
   StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#case-indentation
+  Enabled: true
+
+## Syntax
+
+Style/MethodDefParentheses:
+  StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#method-parentheses
+  Enabled: true
+
+Style/DefWithParentheses:
+  StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#method-parentheses
+  Enabled: true
+
+Style/SpaceAfterMethodName:
+  StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#no-space-after-method-name
   Enabled: true
