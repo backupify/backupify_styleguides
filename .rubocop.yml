@@ -109,6 +109,10 @@ Style/DefWithParentheses:
   StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#method-parentheses
   Enabled: true
 
+Style/AndOr:
+  StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#no-and-or-keyword
+  Enabled: true
+
 Style/SpaceAfterMethodName:
   StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#no-space-after-method-name
   Enabled: true

@@ -157,7 +157,7 @@ else
 end
 ```
 
-* The `and` and `or` keywords are banned. It's just not worth it. Always use `&&` and `||` instead.
+* The `and` and `or` keywords are banned. It's just not worth it. Always use `&&` and `||` instead. [[link](#no-and-or-keyword)]
 
 * Avoid multi-line `?:` (the ternary operator), use `if/unless` instead.
 
