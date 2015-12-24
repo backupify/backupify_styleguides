@@ -31,7 +31,7 @@ some(arg).other
 [1, 2, 3].length
 ```
 
-* No spaces after `!`.
+* No spaces after `!` operator. [[link](#no-space-after-not)]
 
 ```rb
 !array.include?(element)

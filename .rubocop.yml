@@ -95,6 +95,10 @@ Style/RescueEnsureAlignment:
   StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#case-indentation
   Enabled: true
 
+Style/SpaceAfterNot:
+  StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#no-space-after-not
+  Enabled: true
+
 ## Syntax
 
 Style/MethodDefParentheses:
