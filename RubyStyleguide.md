@@ -10,14 +10,16 @@
 
 * End each file with a newline. [[link](#end-file-newline)]
 
-* Use spaces around operators, after commas, colons and semicolons, around `{`, before `}`, and around block parameter pipes `|`.
-Exception: empty hashes should have no space (e.g. `{}`) [[link](#spaces-around-operators)]
+* Use spaces around operators, after commas, colons and semicolons, around `{`, before `}`, and around block parameter pipes `|`. [[link](#spaces-around-operators)]
+  * Exception: empty hashes should have no space (e.g. `{}`).
+  * Exception: string interpolation should have no spaces around `{` and `}`.
 
 ```rb
 sum = 1 + 2
 a, b = 1, 2
 1 > 2 ? true : false; puts "Hi"
 [1, 2, 3].each { |e| puts e }
+def my_method(name = nil); end
 {}
 ```
 

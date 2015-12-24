@@ -24,6 +24,10 @@ Style/SpaceAroundOperators:
     - '='
     - '=>'
 
+Style/SpaceAroundEqualsInParameterDefault:
+  StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#spaces-around-operators
+  EnforcedStyle: space
+
 Style/SpaceAfterComma:
   StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#spaces-around-operators
   Enabled: true
