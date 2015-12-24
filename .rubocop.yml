@@ -59,3 +59,8 @@ Style/SpaceInsideHashLiteralBraces:
   Enabled: true
   EnforcedStyle: space
   EnforcedStyleForEmptyBraces: no_space
+
+Style/SpaceInsideStringInterpolation:
+  StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#spaces-around-operators
+  Enabled: true
+  EnforcedStyle: no_space

@@ -21,6 +21,7 @@ a, b = 1, 2
 [1, 2, 3].each { |e| puts e }
 def my_method(name = nil); end
 {}
+"this is #{my_string_example}"
 ```
 
 * No spaces after `(`, `[` or before `]`, `)`.
