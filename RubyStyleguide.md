@@ -10,7 +10,7 @@
 
 * End each file with a newline. [[link](#end-file-newline)]
 
-* Use spaces around operators, after commas, colons and semicolons, around `{` and before `}`.
+* Use spaces around operators, after commas, colons and semicolons, around `{` and before `}`. [[link](#spaces-around-operators)]
 
 ```rb
 sum = 1 + 2

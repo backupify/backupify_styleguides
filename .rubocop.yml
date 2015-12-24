@@ -16,3 +16,11 @@ Style/TrailingWhitespace:
 Style/TrailingBlankLines:
   StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#end-file-newline
   EnforcedStyle: final_newline
+
+Style/SpaceAroundOperators:
+  StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#spaces-around-operators
+  Enabled: true
+  MultiSpaceAllowedForOperators:
+    - '='
+    - '=>'
+
