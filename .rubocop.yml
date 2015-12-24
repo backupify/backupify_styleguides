@@ -92,3 +92,15 @@ Style/Tab:
 Style/IndentationWidth:
   StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#tabs
   Enabled: true
+
+Style/CaseIndentation:
+  StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#case-indentation
+  Enabled: true
+
+Style/ElseAlignment:
+  StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#case-indentation
+  Enabled: true
+
+Style/RescueEnsureAlignment:
+  StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#case-indentation
+  Enabled: true

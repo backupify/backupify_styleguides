@@ -37,7 +37,7 @@ some(arg).other
 !array.include?(element)
 ```
 
-* Indent when as deep as case.
+* Indent `when` as deep as `case`, `else` as much as `if`, and `rescue` and `ensure` as much as the `end`. [[link](#case-indentation)]
 
 ```rb
 case
@@ -59,6 +59,20 @@ kind = case year
        when 1940..1950 then "Bebop"
        else "Jazz"
        end
+
+status = if success?
+           :200
+         elsif server_error?
+           :500
+         else
+           :400
+         end
+
+def my_method
+  raise 'uhoh'
+rescue
+  puts 'we done broke it'
+end
 ```
 
 * Use empty lines between `def`s and to break up a method into logical paragraphs.
