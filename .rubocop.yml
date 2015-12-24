@@ -24,3 +24,15 @@ Style/SpaceAroundOperators:
     - '='
     - '=>'
 
+Style/SpaceAfterComma:
+  StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#spaces-around-operators
+  Enabled: true
+
+Style/SpaceAfterColon:
+  StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#spaces-around-operators
+  Enabled: true
+
+Style/SpaceAfterSemicolon:
+  StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#spaces-around-operators
+  Enabled: true
+
