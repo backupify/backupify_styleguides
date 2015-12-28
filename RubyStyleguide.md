@@ -75,7 +75,7 @@ rescue
 end
 ```
 
-* Use empty lines between `def`s and to break up a method into logical paragraphs.
+* Use empty lines between `def`s and to break up a method into logical paragraphs. [[link](#lines-between-defs)]
 
 ```rb
 def some_method

@@ -112,6 +112,11 @@ Style/SpaceAfterNot:
   StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#no-space-after-not
   Enabled: true
 
+Style/EmptyLineBetweenDefs:
+  StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#lines-between-defs
+  Enabled: true
+  AllowAdjacentOneLineDefs: false
+
 ## Syntax
 
 Style/MethodDefParentheses:
