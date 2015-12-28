@@ -105,7 +105,7 @@ def some_method_with_arguments(arg1, arg2)
 end
 ```
 
-* Never use `for`, unless you know exactly why. Most of the time iterators should be used instead. `for` is implemented in terms of `each` (so you're adding a level of indirection), but with a twist - `for` doesn't introduce a new scope (unlike `each`) and variables defined in its block will be visible outside it.
+* Never use `for`, unless you know exactly why. Most of the time iterators should be used instead. `for` is implemented in terms of `each` (so you're adding a level of indirection), but with a twist - `for` doesn't introduce a new scope (unlike `each`) and variables defined in its block will be visible outside it. [[link](for-keyword)]
 
 ```rb
 arr = [1, 2, 3]
@@ -119,7 +119,7 @@ end
 arr.each { |elem| puts elem }
 ```
 
-* Never use `then` for multi-line `if/unless`.
+* Never use `then` for multi-line `if/unless`. [[link](#multiline-if-then)]
 
 ```rb
 # bad
@@ -143,7 +143,7 @@ result = if some_condition then something else something_else end
 result = some_condition ? something : something_else
 ```
 
-* Use one expression per branch in a ternary operator. This also means that ternary operators must not be nested. Prefer `if/else` constructs in these cases.
+* Use one expression per branch in a ternary operator. This also means that ternary operators must not be nested. Prefer `if/else` constructs in these cases. [[link](#nested-ternary)]
 
 ```rb
 # bad
@@ -159,9 +159,9 @@ end
 
 * The `and` and `or` keywords are banned. It's just not worth it. Always use `&&` and `||` instead. [[link](#no-and-or-keyword)]
 
-* Avoid multi-line `?:` (the ternary operator), use `if/unless` instead.
+* Avoid multi-line `?:` (the ternary operator), use `if/unless` instead. [[link](#multiline-ternary)]
 
-* Favor modifier `if/unless` usage when you have a single-line body.
+* Favor modifier `if/unless` usage when you have a single-line body. [[link](#modifier-if-unless)]
 
 ```rb
 # bad
@@ -173,7 +173,7 @@ end
 do_something if some_condition
 ```
 
-* Never use `unless` with `else`. Rewrite these with the positive case first.
+* Never use `unless` with `else`. Rewrite these with the positive case first. [[link](#unless-else)]
 
 ```rb
 # bad
@@ -191,7 +191,7 @@ else
 end
 ```
 
-* Don't use parentheses around the condition of an `if/unless/while`.
+* Don't use parentheses around the condition of an `if/unless/while`. [[link](#parens-around-condition)]
 
 ```rb
 # bad
@@ -205,7 +205,7 @@ if x > 10
 end
 ```
 
-* Prefer `{...}` over `do...end` for single-line blocks. Avoid using `{...}` for multi-line blocks (multiline chaining is always ugly). Always use `do...end` for "control flow" and "method definitions" (e.g. in Rakefiles and certain DSLs). Avoid `do...end` when chaining.
+* Prefer `{...}` over `do...end` for single-line blocks. Avoid using `{...}` for multi-line blocks (multiline chaining is always ugly). Always use `do...end` for "control flow" and "method definitions" (e.g. in Rakefiles and certain DSLs). Avoid `do...end` when chaining. [[link](#block-syntax)]
 
 ```rb
 names = ["Bozhidar", "Steve", "Sarah"]
@@ -229,7 +229,7 @@ end.map { |name| name.upcase }
 
 * Some will argue that multiline chaining would look OK with the use of `{...}`, but they should ask themselves - is this code really readable and can't the block's contents be extracted into nifty methods?
 
-* Avoid `return` where not required.
+* Avoid `return` where not required. [[link](#avoid-return)]
 
 ```rb
 # bad
@@ -243,7 +243,7 @@ def some_method(some_arr)
 end
 ```
 
-* Use spaces around the `=` operator when assigning default values to method parameters:
+* Use spaces around the `=` operator when assigning default values to method parameters. [[link](space-around-param-default)]
 
 ```rb
 # bad
@@ -286,7 +286,7 @@ enabled ||= true
 enabled = true if enabled.nil?
 ```
 
-* Avoid using Perl-style special variables (like `$0-9`, `$`, etc. ). They are quite cryptic and their use in anything but one-liner scripts is discouraged. Prefer long form versions such as `$PROGRAM_NAME`.
+* Avoid using Perl-style special variables (like `$0-9`, `$`, etc. ). They are quite cryptic and their use in anything but one-liner scripts is discouraged. Prefer long form versions such as `$PROGRAM_NAME`. [[link](#no-perlisms)]
 
 * Never put a space between a method name and the opening parenthesis. [[link](#no-space-after-method-name)]
 
@@ -316,13 +316,13 @@ Refactoring is even better. It's worth looking hard at any code that explicitly 
 
 ## Naming
 
-* Use `snake_case` for methods and variables.
+* Use `snake_case` for methods and variables. [[link](#variable-names)]
 
 <!--
 * Use `CamelCase` for classes and modules. (Keep acronyms like `HTTP`, `RFC`, `XML` uppercase.)
 -->
 
-* Use `SCREAMING_SNAKE_CASE` for other constants.
+* Use `SCREAMING_SNAKE_CASE` for other constants. [[link](#constant-names)]
 
 * The names of predicate methods (methods that return a boolean value) should end in a question mark. (i.e. `Array#empty?`).
 
@@ -330,7 +330,7 @@ Refactoring is even better. It's worth looking hard at any code that explicitly 
 
 ## Classes
 
-* Avoid the usage of class (`@@`) variables due to their unusual behavior in inheritance.
+* Avoid the usage of class (`@@`) variables due to their unusual behavior in inheritance. [[link](#class-vars)]
 
 ```rb
 class Parent
@@ -348,7 +348,7 @@ end
 Parent.print_class_var # => will print "child"
 ```
 
-* As you can see all the classes in a class hierarchy actually share one class variable. Class instance variables should usually be preferred over class variables.
+As you can see all the classes in a class hierarchy actually share one class variable. Class instance variables should usually be preferred over class variables.
 
 * Use `def self.method` to define singleton methods. This makes the methods more resistant to refactoring changes.
 
@@ -396,7 +396,7 @@ class TestClass
 end
 ```
 
-* Indent the `public`, `protected`, and `private` methods as much the method definitions they apply to. Leave one blank line above and after them.
+* Indent the `public`, `protected`, and `private` methods as much the method definitions they apply to. Leave one blank line above and after them. [[link](#access-modifier-indent)]
 
 ```rb
 class SomeClass
@@ -447,7 +447,7 @@ else
 end
 ```
 
-* Rescue specific exceptions, not `StandardError` or its superclasses.
+* Rescue specific exceptions, not `StandardError` or its superclasses. [[link](#rescue-specific-exceptions)]
 
 ```rb
 # bad
@@ -467,7 +467,7 @@ end
 
 ## Collections
 
-Prefer `%w` to the literal array syntax when you need an array of words.
+Prefer `%w` to the literal array syntax when you need an array of words. [[link](#percent-w)]
 
 ```rb
 # bad
