@@ -5,6 +5,14 @@ AllCops:
     - script/**/*
     - config/**/*
 
+Style/IndentationConsistency:
+  Enabled: true
+  AutoCorrect: true
+
+Style/CommentIndentation:
+  Enabled: true
+  AutoCorrect: true
+
 ## Coding Style
 
 Style/Tab:
