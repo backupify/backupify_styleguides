@@ -307,7 +307,7 @@ Refactoring is even better. It's worth looking hard at any code that explicitly 
 
 * The names of predicate methods (methods that return a boolean value) should end in a question mark. (i.e. `Array#empty?`).
 
-* The names of potentially "dangerous" methods (i.e. methods that modify `self` or the arguments, `exit!`, modify global state, etc.) should end with an exclamation mark. Bang methods should only exist if a non-bang method exists. (More on this).
+* The names of potentially "dangerous" methods (i.e. methods that modify the class's state, the arguments, `exit!`, modify global state, etc.) should end with an exclamation mark. Bang methods should only exist if a non-bang method exists. (More on this).
 
 ## Classes
 
