@@ -186,7 +186,7 @@ if x > 10
 end
 ```
 
-* Prefer `{...}` over `do...end` for single-line blocks. Avoid using `{...}` for multi-line blocks (multiline chaining is always ugly). Always use `do...end` for "control flow" and "method definitions" (e.g. in Rakefiles and certain DSLs).
+* Prefer `{...}` over `do...end` for single-line blocks. Avoid using `{...}` for multi-line blocks. Always use `do...end` for "control flow" and "method definitions" (e.g. in Rakefiles and certain DSLs).
 
 ```rb
 names = ["Bozhidar", "Steve", "Sarah"]
@@ -198,14 +198,6 @@ names.each { |name| puts name }
 names.each do |name|
   puts name
 end
-
-# good
-names.select { |name| name.start_with?("S") }.map { |name| name.upcase }
-
-# bad
-names.select do |name|
-  name.start_with?("S")
-end.map { |name| name.upcase }
 ```
 
 * Some will argue that multiline chaining would look OK with the use of `{...}`, but they should ask themselves - is this code really readable and can't the block's contents be extracted into nifty methods?
