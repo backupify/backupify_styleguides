@@ -15,6 +15,18 @@ Style/CommentIndentation:
   Enabled: true
   AutoCorrect: true
 
+Style/NestedModifier:
+  Enabled: true
+
+Style/IndentArray:
+  Enabled: true
+
+Style/AlignArray:
+  Enabled: true
+
+Style/AlignHash:
+  Enabled: true
+
 #Lint/EmptyInterpolation:
 #  Enabled: true
 #
@@ -139,6 +151,7 @@ Style/IndentationWidth:
 Metrics/LineLength:
   StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#max-line-length
   Max: 120
+  Enabled: false
 
 Style/TrailingWhitespace:
   StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#no-trailing-whitespace
@@ -274,7 +287,7 @@ Style/ParenthesesAroundCondition:
 
 Style/MultilineBlockChain:
   StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#block-syntax
-  Enabled: true
+  Enabled: false
 
 Style/RedundantReturn:
   StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#avoid-return
