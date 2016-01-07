@@ -1,11 +1,5 @@
 AllCops:
   DisabledByDefault: true
-  Exclude:
-    - db/**/*
-    - script/**/*
-    - config/**/*
-    - features/**/*
-    - lib/ext/**/*
 
 Style/IndentationConsistency:
   Enabled: true
