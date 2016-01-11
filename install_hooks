@@ -1,0 +1,19 @@
+#! /usr/bin/env ruby
+
+raise "Couldn't find .git folder. Please run in base directory of a git project" unless Dir.exists?('.git')
+
+Dir[File.expand_path('../hooks/**/*.rb', __FILE__)].each do |hook|
+  load hook
+  hook = File.basename(hook).sub(/\.rb$/, '')
+  out = File.join('.git/hooks', hook.gsub('_', '-'))
+  if File.exists?(out)
+    puts 'Checking if already installed'
+    puts 'Installing by appending to current file'
+  else
+    puts "No #{hook} hook file found in .git/hooks, creating one"
+    File.open(out, 'w') { |f| f.puts "#! /usr/bin/env ruby \n" }
+    `chmod +x #{out}`
+    hook_klass = BackupifyStyleguides::Hooks.const_get(hook.split('_').map(&:capitalize).join) 
+    hook_klass.install_hook
+  end
+end
