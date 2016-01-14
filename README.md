@@ -33,3 +33,5 @@ inherit_gem:
 ```
 
 Then to run rubocop use `bundle exec rubocop`
+
+You can also take a look at this example for how to create a git hook that will run a check before you push: https://gist.github.com/jbodah/6c3448056d1fe727de10
