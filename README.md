@@ -35,3 +35,27 @@ inherit_gem:
 Then to run rubocop use `bundle exec rubocop`
 
 You can also take a look at this example for how to create a git hook that will run a check before you push: https://gist.github.com/jbodah/6c3448056d1fe727de10
+
+### Editor Configs
+
+Below are some common configs for various editors that help you conform to the styleguides:
+
+#### Atom
+
+#### Sublime
+
+#### Vim
+
+```
+" fix whitespace just before we write the buffer to a file
+" save the cursor position
+function! <SID>FixWhitespace()
+    let l:save_cursor = getpos(".")
+    silent! execute ':%s/\s\+$//'
+    call setpos('.', l:save_cursor)
+endfunction
+autocmd BufWritePre * :call <SID>FixWhitespace()
+```
+
+#### Emacs
+
