@@ -42,7 +42,20 @@ Below are some common configs for various editors that help you conform to the s
 
 #### Atom
 
+Atom provides trailing whitespace removal by default via the [whitespace](https://atom.io/packages/whitespace) package.
+
+To view and modify the settings go to `Atom -> Preferences -> Packages -> search for whitespace -> click it's settings button`
+
 #### Sublime
+
+Go to `SublimeText 2 > Preferences > User Settings`. This should open your User Settings as a JSON file. Add the following lines to your file:
+
+```javascript
+"trim_trailing_white_space_on_save": true
+"ensure_newline_at_eof_on_save": true
+```
+
+For more features, check out the [whitespace](https://packagecontrol.io/packages/Whitespace) package.
 
 #### Vim
 
