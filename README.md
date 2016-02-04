@@ -35,3 +35,40 @@ inherit_gem:
 Then to run rubocop use `bundle exec rubocop`
 
 You can also take a look at this example for how to create a git hook that will run a check before you push: https://gist.github.com/jbodah/6c3448056d1fe727de10
+
+### Editor Configs
+
+Below are some common configs for various editors that help you conform to the styleguides:
+
+#### Atom
+
+Atom provides trailing whitespace removal by default via the [whitespace](https://atom.io/packages/whitespace) package.
+
+To view and modify the settings go to `Atom -> Preferences -> Packages -> search for whitespace -> click it's settings button`
+
+#### Sublime
+
+Go to `SublimeText 2 > Preferences > User Settings`. This should open your User Settings as a JSON file. Add the following lines to your file:
+
+```javascript
+"trim_trailing_white_space_on_save": true
+"ensure_newline_at_eof_on_save": true
+```
+
+For more features, check out the [whitespace](https://packagecontrol.io/packages/Whitespace) package.
+
+#### Vim
+
+```
+" fix whitespace just before we write the buffer to a file
+" save the cursor position
+function! <SID>FixWhitespace()
+    let l:save_cursor = getpos(".")
+    silent! execute ':%s/\s\+$//'
+    call setpos('.', l:save_cursor)
+endfunction
+autocmd BufWritePre * :call <SID>FixWhitespace()
+```
+
+#### Emacs
+
