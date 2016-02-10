@@ -158,9 +158,7 @@ Style/TrailingBlankLines:
 Style/SpaceAroundOperators:
   StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#spaces-around-operators
   Enabled: true
-  MultiSpaceAllowedForOperators:
-    - '='
-    - '=>'
+  AllowForAlignment: true
 
 Style/SpaceAroundEqualsInParameterDefault:
   StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#spaces-around-operators

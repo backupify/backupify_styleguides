@@ -16,6 +16,15 @@ these things into your development workflow.
 
 This repository holds the config files for various builds and linters that we use.
 
+### Testing
+
+You can test the rubocop configuration with the latests version of rubocop here:
+
+```
+bundle update rubocop
+bundle exec rubocop -c config/.rubocop.yml
+```
+
 ### Rubocop
 
 To add the rubocop config to your project:
