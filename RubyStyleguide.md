@@ -161,8 +161,6 @@ end
 
 * Avoid multi-line `?:` (the ternary operator), use `if/unless` instead. [[link](#multiline-ternary)]
 
-* Favor modifier `if/unless` usage when you have a single-line body. [[link](#modifier-if-unless)]
-
 ```rb
 # bad
 if some_condition
@@ -405,7 +403,7 @@ class SomeClass
   end
 
   private
-  
+
   def private_method
     # ...
   end
