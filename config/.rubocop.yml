@@ -59,7 +59,7 @@ Style/AlignHash:
 # TODO JMB 2015-12-28: should we include this?
 #Lint/UselessAssignment:
 #  Enabled: true
- 
+
 #Lint/RequireParentheses:
 #  Enabled: true
 #
@@ -223,7 +223,7 @@ Style/RescueEnsureAlignment:
   StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#case-indentation
   Enabled: true
 
-Lint/EndAlignment: 
+Lint/EndAlignment:
   StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#case-indentation
   Enabled: true
   AutoCorrect: true
@@ -265,10 +265,6 @@ Style/AndOr:
 
 Style/MultilineTernaryOperator:
   StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#multiline-ternary
-  Enabled: true
-
-Style/IfUnlessModifier:
-  StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#modifier-if-unless
   Enabled: true
 
 Style/UnlessElse:
