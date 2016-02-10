@@ -43,6 +43,19 @@ inherit_gem:
 
 Then to run rubocop use `bundle exec rubocop`
 
+To add it to your build:
+
+You can incoporate this into your build by doing:
+
+```rb
+desc "Run style checks"
+task :style do
+  abort unless system "bundle exec rubocop"
+end
+
+task :default => [:style, :test]
+```
+
 You can also take a look at this example for how to create a git hook that will run a check before you push: https://gist.github.com/jbodah/6c3448056d1fe727de10
 
 ### Editor Configs
