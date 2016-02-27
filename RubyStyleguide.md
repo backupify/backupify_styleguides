@@ -2,14 +2,19 @@
 
 ## Coding Style
 
+<a name="tabs"></a>
 * Use soft-tabs with a two space indent. [[link](#tabs)]
 
+<a name="max-line-length"></a>
 * Keep lines fewer than 120 characters. [[link](#max-line-length)]
 
+<a name="no-trailing-whitespace"></a>
 * Never leave trailing whitespace. [[link](#no-trailing-whitespace)]
 
+<a name="end-file-newline"></a>
 * End each file with a newline. [[link](#end-file-newline)]
 
+<a name="spaces-around-operators"></a>
 * Use spaces around operators, after commas, colons and semicolons, around `{`, before `}`, and around block parameter pipes `|`. [[link](#spaces-around-operators)]
   * Exception: empty hashes should have no space (e.g. `{}`).
   * Exception: string interpolation should have no spaces around `{` and `}`.
@@ -24,6 +29,7 @@ def my_method(name = nil); end
 "this is #{my_string_example}"
 ```
 
+<a name="no-spaces-around-delimiters"></a>
 * No spaces after `(`, `[` or before `]`, `)`. [[link](#no-spaces-around-delimiters)]
 
 ```rb
@@ -31,12 +37,14 @@ some(arg).other
 [1, 2, 3].length
 ```
 
+<a name="no-space-after-not"></a>
 * No spaces after `!` operator. [[link](#no-space-after-not)]
 
 ```rb
 !array.include?(element)
 ```
 
+<a name="case-indentation"></a>
 * Indent `when` as deep as `case`, `else` as much as `if`, and `rescue` and `ensure` as much as the `end`. [[link](#case-indentation)]
 
 ```rb
@@ -75,6 +83,7 @@ rescue
 end
 ```
 
+<a name="lines-between-defs"></a>
 * Use empty lines between `def`s and to break up a method into logical paragraphs. [[link](#lines-between-defs)]
 
 ```rb
@@ -93,6 +102,7 @@ end
 
 ## Syntax
 
+<a name="method-parentheses"></a>
 * Use `def` with parentheses when there are arguments. Omit the parentheses when the method doesn't accept any arguments. [[link](#method-parentheses)]
 
 ```rb
@@ -105,6 +115,7 @@ def some_method_with_arguments(arg1, arg2)
 end
 ```
 
+<a name="for-keyword"></a>
 * Never use `for`, unless you know exactly why. Most of the time iterators should be used instead. `for` is implemented in terms of `each` (so you're adding a level of indirection), but with a twist - `for` doesn't introduce a new scope (unlike `each`) and variables defined in its block will be visible outside it. [[link](for-keyword)]
 
 ```rb
@@ -119,6 +130,7 @@ end
 arr.each { |elem| puts elem }
 ```
 
+<a name="multiline-if-then"></a>
 * Never use `then` for multi-line `if/unless`. [[link](#multiline-if-then)]
 
 ```rb
@@ -143,6 +155,7 @@ result = if some_condition then something else something_else end
 result = some_condition ? something : something_else
 ```
 
+<a name="nested-ternary"></a>
 * Use one expression per branch in a ternary operator. This also means that ternary operators must not be nested. Prefer `if/else` constructs in these cases. [[link](#nested-ternary)]
 
 ```rb
@@ -157,8 +170,10 @@ else
 end
 ```
 
+<a name="no-and-or-keyword"></a>
 * The `and` and `or` keywords are banned. It's just not worth it. Always use `&&` and `||` instead. [[link](#no-and-or-keyword)]
 
+<a name="multiline-ternary"></a>
 * Avoid multi-line `?:` (the ternary operator), use `if/unless` instead. [[link](#multiline-ternary)]
 
 ```rb
@@ -171,6 +186,7 @@ end
 do_something if some_condition
 ```
 
+<a name="unless-else"></a>
 * Never use `unless` with `else`. Rewrite these with the positive case first. [[link](#unless-else)]
 
 ```rb
@@ -189,6 +205,7 @@ else
 end
 ```
 
+<a name="parens-around-condition"></a>
 * Don't use parentheses around the condition of an `if/unless/while`. [[link](#parens-around-condition)]
 
 ```rb
@@ -203,6 +220,7 @@ if x > 10
 end
 ```
 
+<a name="block-syntax"></a>
 * Prefer `{...}` over `do...end` for single-line blocks. Avoid using `{...}` for multi-line blocks (multiline chaining is always ugly). Always use `do...end` for "control flow" and "method definitions" (e.g. in Rakefiles and certain DSLs). Avoid `do...end` when chaining. [[link](#block-syntax)]
 
 ```rb
@@ -227,6 +245,7 @@ end.map { |name| name.upcase }
 
 * Some will argue that multiline chaining would look OK with the use of `{...}`, but they should ask themselves - is this code really readable and can't the block's contents be extracted into nifty methods?
 
+<a name="avoid-return"></a>
 * Avoid `return` where not required. [[link](#avoid-return)]
 
 ```rb
@@ -240,8 +259,8 @@ def some_method(some_arr)
   some_arr.size
 end
 ```
-
-* Use spaces around the `=` operator when assigning default values to method parameters. [[link](space-around-param-default)]
+<a name="space-around-param-default"></a>
+* Use spaces around the `=` operator when assigning default values to method parameters. [[link](#space-around-param-default)]
 
 ```rb
 # bad
@@ -284,8 +303,10 @@ enabled ||= true
 enabled = true if enabled.nil?
 ```
 
+<a name="no-perlisms"></a>
 * Avoid using Perl-style special variables (like `$0-9`, `$`, etc. ). They are quite cryptic and their use in anything but one-liner scripts is discouraged. Prefer long form versions such as `$PROGRAM_NAME`. [[link](#no-perlisms)]
 
+<a name="no-space-after-method-name"></a>
 * Never put a space between a method name and the opening parenthesis. [[link](#no-space-after-method-name)]
 
 ```rb
@@ -314,12 +335,14 @@ Refactoring is even better. It's worth looking hard at any code that explicitly 
 
 ## Naming
 
+<a name="variable-names"></a>
 * Use `snake_case` for methods and variables. [[link](#variable-names)]
 
 <!--
 * Use `CamelCase` for classes and modules. (Keep acronyms like `HTTP`, `RFC`, `XML` uppercase.)
 -->
 
+<a name="constant-names"></a>
 * Use `SCREAMING_SNAKE_CASE` for other constants. [[link](#constant-names)]
 
 * The names of predicate methods (methods that return a boolean value) should end in a question mark. (i.e. `Array#empty?`).
@@ -328,6 +351,7 @@ Refactoring is even better. It's worth looking hard at any code that explicitly 
 
 ## Classes
 
+<a name="class-vars"></a>
 * Avoid the usage of class (`@@`) variables due to their unusual behavior in inheritance. [[link](#class-vars)]
 
 ```rb
@@ -394,6 +418,7 @@ class TestClass
 end
 ```
 
+<a name="access-modifier-indent"></a>
 * Indent the `public`, `protected`, and `private` methods as much the method definitions they apply to. Leave one blank line above and after them. [[link](#access-modifier-indent)]
 
 ```rb
@@ -445,6 +470,7 @@ else
 end
 ```
 
+<a name="rescue-specific-exceptions"></a>
 * Rescue specific exceptions, not `StandardError` or its superclasses. [[link](#rescue-specific-exceptions)]
 
 ```rb
@@ -465,6 +491,7 @@ end
 
 ## Collections
 
+<a name="percent-w"></a>
 Prefer `%w` to the literal array syntax when you need an array of words. [[link](#percent-w)]
 
 ```rb
