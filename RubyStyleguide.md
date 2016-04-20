@@ -492,7 +492,7 @@ end
 ## Collections
 
 <a name="percent-w"></a>
-Prefer `%w` to the literal array syntax when you need an array of words. [[link](#percent-w)]
+* Prefer `%w` to the literal array syntax when you need an array of words. [[link](#percent-w)]
 
 ```rb
 # bad
@@ -513,6 +513,9 @@ hash = { "one" => 1, "two" => 2, "three" => 3 }
 # good
 hash = { :one => 1, :two => 2, :three => 3 }
 ```
+
+<a name="banned-aliases"></a>
+* `collect`, `collect!`, `inject`, `detect`, and `find_all` are banned; use `map`, `map!`, `reduce`, `find`, and `select` instead. [[link](#banned-aliases)]
 
 ## Strings
 

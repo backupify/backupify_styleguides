@@ -327,3 +327,20 @@ Style/WordArray:
   StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#percent-w
   Enabled: true
   MinSize: 3
+
+# Align with the style guide.
+Style/CollectionMethods:
+  # Mapping from undesired method to desired_method
+  # e.g. to use `detect` over `find`:
+  #
+  # CollectionMethods:
+  #   PreferredMethods:
+  #     find: detect
+  Enabled: true
+  StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#banned-aliases
+  PreferredMethods:
+    collect: 'map'
+    collect!: 'map!'
+    inject: 'reduce'
+    detect: 'find'
+    find_all: 'select'
