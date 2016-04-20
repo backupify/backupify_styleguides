@@ -134,6 +134,13 @@ Style/AlignHash:
 
 ## Coding Style
 
+Metrics/MethodLength:
+  StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#method-length
+  Enabled: true
+  CountComments: false # count full line comments?
+  Max: 40
+  Severity: warning
+
 Style/Tab:
   StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#tabs
   Enabled: true

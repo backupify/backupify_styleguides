@@ -2,6 +2,9 @@
 
 ## Coding Style
 
+<a name="method-length"></a>
+* Prefer methods with less than 40 lines. [[link](#method-length)]
+
 <a name="tabs"></a>
 * Use soft-tabs with a two space indent. [[link](#tabs)]
 
