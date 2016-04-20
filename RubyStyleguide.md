@@ -8,6 +8,9 @@
 <a name="tabs"></a>
 * Use soft-tabs with a two space indent. [[link](#tabs)]
 
+<a name="parameter-count"></a>
+* Prefer methods with 5 or less parameters. [[link](#parameter-count)]
+
 <a name="max-line-length"></a>
 * Keep lines fewer than 120 characters. [[link](#max-line-length)]
 
