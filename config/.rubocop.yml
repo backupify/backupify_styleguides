@@ -138,6 +138,13 @@ Style/Tab:
   StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#tabs
   Enabled: true
 
+Metrics/ParameterLists:
+  StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#parameter-count
+  Enabled: true
+  Severity: warning
+  Max: 5
+  CountKeywordArgs: true
+
 Style/IndentationWidth:
   StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#tabs
   Enabled: true
