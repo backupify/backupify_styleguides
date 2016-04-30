@@ -139,7 +139,7 @@ Metrics/MethodLength:
   Enabled: true
   CountComments: false # count full line comments?
   Max: 40
-  Severity: warning
+  Severity: refactor
 
 Style/Tab:
   StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#tabs
@@ -148,7 +148,7 @@ Style/Tab:
 Metrics/ParameterLists:
   StyleGuide: https://github.com/backupify/backupify_styleguides/blob/master/RubyStyleguide.md#parameter-count
   Enabled: true
-  Severity: warning
+  Severity: refactor
   Max: 5
   CountKeywordArgs: true
 
