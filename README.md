@@ -27,6 +27,16 @@ bundle exec rubocop -c config/.rubocop.yml
 
 ### Rubocop
 
+[Rubocop](https://github.com/bbatsov/rubocop) is the idiomatic style checker for Ruby. To run rubocop:
+
+```
+bundle exec rubocop
+```
+
+[This example](https://gist.github.com/jbodah/6c3448056d1fe727de10) contains a git hook that will run rubocop before you push.
+
+#### Incorporating in Other Projects
+
 To add the rubocop config to your project:
 
 ```rb
@@ -41,11 +51,7 @@ inherit_gem:
   backupify_styleguides: config/.rubocop.yml
 ```
 
-Then to run rubocop use `bundle exec rubocop`
-
-To add it to your build:
-
-You can incoporate this into your build by doing:
+To add it to your `Rakefile`:
 
 ```rb
 desc "Run style checks"
@@ -55,8 +61,6 @@ end
 
 task :default => [:style, :test]
 ```
-
-You can also take a look at this example for how to create a git hook that will run a check before you push: https://gist.github.com/jbodah/6c3448056d1fe727de10
 
 ### Editor Configs
 
@@ -91,6 +95,3 @@ function! <SID>FixWhitespace()
 endfunction
 autocmd BufWritePre * :call <SID>FixWhitespace()
 ```
-
-#### Emacs
-
