@@ -33,6 +33,13 @@ bundle exec rubocop -c config/.rubocop.yml
 bundle exec rubocop
 ```
 
+Rubocop supports options for auto-correcting your code too:
+
+```
+bundle exec rubocop --auto-correct file_one.rb file_two.rb
+bundle exec rubocop --auto-correct
+```
+
 [This snippet contains a git hook](https://gist.github.com/jbodah/6c3448056d1fe727de10) that will run rubocop before you push.
 
 #### Incorporating in Other Projects
