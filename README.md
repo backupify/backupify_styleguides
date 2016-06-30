@@ -33,7 +33,7 @@ bundle exec rubocop -c config/.rubocop.yml
 bundle exec rubocop
 ```
 
-[This example](https://gist.github.com/jbodah/6c3448056d1fe727de10) contains a git hook that will run rubocop before you push.
+[This snippet contains a git hook](https://gist.github.com/jbodah/6c3448056d1fe727de10) that will run rubocop before you push.
 
 #### Incorporating in Other Projects
 
